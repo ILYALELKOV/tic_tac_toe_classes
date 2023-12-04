@@ -1,12 +1,17 @@
 import styles from './Cell.module.css'
 import PropTypes from 'prop-types'
+import { Component } from 'react'
 
-export const Cell = ({ click, value }) => {
-	return (
-		<div className={styles.cell} onClick={click}>
-			{value}
-		</div>
-	)
+export class Cell extends Component {
+	render() {
+		const { click, value } = this.props
+
+		return (
+			<div className={styles.cell} onClick={click}>
+				{value}
+			</div>
+		)
+	}
 }
 
 Cell.propTypes = {
